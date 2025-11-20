@@ -1,0 +1,521 @@
+/* general style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    scroll-padding-top: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #F5F5F5;
+    color: #4e4e4e;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hv a {
+    color: #323232;
+    font-family: Roboto;
+    font-weight: bold;
+    position: relative;
+    outline: none !important;
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+
+.hv a::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: 0.8s;
+}
+
+.hv a:hover,
+.hv a.active
+.hv a:focus {
+    color: #fff;
+}
+
+.hv a:hover::after,
+.hv a.active::after ,
+.hv a:focus::after
+ {
+    background-color: #fff;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .hv a::after {
+        display: none !important;
+    }
+}
+
+
+
+
+
+@keyframes typing {
+    0% {
+        content: "";
+    }
+
+    2% {
+        content: "D";
+    }
+
+    4% {
+        content: "De";
+    }
+
+    6% {
+        content: "Des";
+    }
+
+    8% {
+        content: "Desi";
+    }
+
+    10% {
+        content: "Desig";
+    }
+
+    12% {
+        content: "Design";
+    }
+
+    14% {
+        content: "Designe";
+    }
+
+    16% {
+        content: "Designer";
+    }
+
+    20% {
+        content: "Designer";
+    }
+
+    22% {
+        content: "Designe";
+    }
+
+    24% {
+        content: "Design";
+    }
+
+    26% {
+        content: "Desig";
+    }
+
+    28% {
+        content: "Desi";
+    }
+
+    30% {
+        content: "Des";
+    }
+
+    32% {
+        content: "De";
+    }
+
+    34% {
+        content: "D";
+    }
+
+    36% {
+        content: "";
+    }
+
+    38% {
+        content: "D";
+    }
+
+    40% {
+        content: "De";
+    }
+
+    42% {
+        content: "Dev";
+    }
+
+    44% {
+        content: "Deve";
+    }
+
+    46% {
+        content: "Devel";
+    }
+
+    48% {
+        content: "Develo";
+    }
+
+    50% {
+        content: "Develop";
+    }
+
+    52% {
+        content: "Develope";
+    }
+
+    54% {
+        content: "Developer";
+    }
+
+    58% {
+        content: "Developer";
+    }
+
+    60% {
+        content: "Develope";
+    }
+
+    62% {
+        content: "Develop";
+    }
+
+    64% {
+        content: "Develo";
+    }
+
+    66% {
+        content: "Devel";
+    }
+
+    68% {
+        content: "Deve";
+    }
+
+    70% {
+        content: "Dev";
+    }
+
+    72% {
+        content: "De";
+    }
+
+    74% {
+        content: "D";
+    }
+
+    76% {
+        content: "";
+    }
+
+    78% {
+        content: "F";
+    }
+
+    80% {
+        content: "Fr";
+    }
+
+    82% {
+        content: "Fre";
+    }
+
+    84% {
+        content: "Free";
+    }
+
+    86% {
+        content: "Freel";
+    }
+
+    88% {
+        content: "Freela";
+    }
+
+    90% {
+        content: "Freelan";
+    }
+
+    92% {
+        content: "Freelanc";
+    }
+
+    94% {
+        content: "Freelance";
+    }
+
+    96% {
+        content: "Freelancer";
+    }
+
+    98% {
+        content: "Freelancer";
+    }
+
+    99% {
+        content: "";
+    }
+}
+
+.typewriter {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    --caret: black;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 20s steps(1) infinite;
+}
+
+.typewriter::after {
+    content: "";
+    border-right: 2px solid var(--caret);
+    animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.content-header h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+.content-header span {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+
+
+.progress-bar {
+    height: 0.7rem;
+    background-color: #0078ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    transition: width 0.6s ease;
+}
+
+.progress {
+    background-color: #cde1f8;
+    margin: 0.5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: 0.7rem;
+}
+
+.about-data p {
+    font-size: 1.25rem;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.about-data h5 {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+    color: #1e1e1e;
+}
+
+.about-data h5::before {
+    content: '';
+    width: 100px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #0078ff;
+}
+
+.title {
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+
+.ico-circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service .ico-circle:hover {
+    color: white;
+    background-color: #0078ff;
+}
+
+.service-title h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    color: #1e1e1e;
+}
+
+.service-title p::before {
+    content: '';
+
+    position: absolute;
+    bottom: -10px;
+    width: 40px;
+    height: 5px;
+    background-color: #0078ff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.counter {
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url('./../img/counters-bg.jpg');
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.counter .ico-circle {
+    height: 60px;
+    width: 60px;
+    line-height: 1.5;
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.card-img {
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease-in-out;
+    display: block;
+}
+
+.card-img:hover img {
+    transform: scale(1.2);
+}
+
+.info {
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url('./../img/overlay-bg.jpg');
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    overflow: hidden;
+    border-radius: 50%
+}
+
+.card-cont a {
+    font-size: 21px;
+    font-weight: 500px;
+    line-height: 25px;
+    color: #1e1e1e;
+    text-decoration: none;
+}
+
+.card-cont a:hover {
+    color: #0078ff;
+}
+
+.footer {
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7), rgba(0, 120, 255, 0.7)), url('./../img/overlay-bg.jpg');
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.list-icon ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.icon-circle {
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    line-height: 1.6;
+    margin: 0 15px 0 0;
+    box-shadow: 0 0 0 3px #0078ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+    padding-bottom: 6px;
+}
+
+.icon-circle:hover {
+    background-color: #0078ff;
+    color: #fff;
+}
+
+.btn-sty {
+    padding: 10px 24px;
+    border-radius: 5rem;
+}
+
+.carousel-indicators [data-bs-target] {width: 10px; height: 10px; border-radius: 50%;}
+  
+  
+  
